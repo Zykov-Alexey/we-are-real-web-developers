@@ -844,6 +844,9 @@ a {
   letter-spacing: 1.8px;
   background-color: rgba(45, 54, 81, 0.8);
   border: 2px solid #2d3651;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .button-skill__accent:hover {
@@ -861,6 +864,8 @@ a {
   font-weight: 700;
   letter-spacing: 4px;
   line-height: 48px;
+  margin-top: 0;
+  margin-bottom: 47px;
 }
 
 .ready {
@@ -871,24 +876,19 @@ a {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.ready-left {
+.ready__left {
+  width: 936px;
+  height: 321px;
   font-size: 18px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-right: 60px;
+  padding-top: 97px;
 }
 
-.ready-left h2 {
-  margin-top: 0;
-  margin-bottom: 40px;
-}
-
-.ready-left .line-after {
+.ready__left .line-after {
   position: relative;
   padding-right: 50px;
 }
 
-.ready-left .line-after::after {
+.ready__left .line-after::after {
   content: "";
   position: absolute;
   width: 1px;
@@ -898,8 +898,24 @@ a {
   background-color: rgba(68, 89, 110, 0.27);
 }
 
-.ready-rigth {
+.ready__content {
+  color: #637588;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.9px;
+  line-height: 24px;
+}
+
+.ready__rigth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 97px;
   padding-left: 42px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .formsection {
@@ -930,10 +946,14 @@ a {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1.8px;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .formsection .button-form:hover {
   background-color: #d66926;
+  border-color: #ffffff;
 }
 
 .forms__items {
@@ -1110,6 +1130,9 @@ input::placeholder {
   letter-spacing: 1.8px;
   background-color: rgba(45, 54, 81, 0.8);
   border: 2px solid #2d3651;
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .button-posts__accent:hover {
