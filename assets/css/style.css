@@ -1050,12 +1050,8 @@ input::placeholder {
 }
 
 .posts-item {
-  background-color: #eeeeee;
   grid-template-rows: 1fr 1fr;
   сolor: #637588;
-  -webkit-transition: background-color .25s ease;
-  -o-transition: background-color .25s ease;
-  transition: background-color .25s ease;
   overflow: hidden;
 }
 
@@ -1067,10 +1063,13 @@ input::placeholder {
   grid-column: 3 / 5;
 }
 
-.posts-item:hover .posts-item-img {
-  -webkit-transform: scale(1.05) translateY(-6.5px);
-      -ms-transform: scale(1.05) translateY(-6.5px);
-          transform: scale(1.05) translateY(-6.5px);
+.posts-item:hover {
+  background-color: #d5d5d5;
+  -webkit-transition: -webkit-transform .25s ease;
+  transition: -webkit-transform .25s ease;
+  -o-transition: transform .25s ease;
+  transition: transform .25s ease;
+  transition: transform .25s ease, -webkit-transform .25s ease;
 }
 
 .posts-item-png {
