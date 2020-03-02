@@ -24,6 +24,52 @@
   max-width: $ul;
 	margin: auto;
   grid-template-columns: repeat(3, 1fr);
+  
+  @include lg-md {
+    max-width: $lg;
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 3.2px;
+      line-height: 40px;
+    }
+  }
+  @include md-sm {
+    max-width: $md;
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      line-height: 32px;
+    }
+    p{
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.8px;
+      line-height: 24px;
+    }
+  }
+
+  @include sm {
+    max-width: $sm;
+    grid-template-columns: 1fr;
+    h2 {
+      
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 2.4px;
+      line-height: 32px;
+    }
+    p{
+      padding-left: 22px;
+      padding-right: 22px;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.8px;
+      line-height: 24px;
+      }
+    }
 }
 .position-image{
   padding-top: 97px;
@@ -34,17 +80,17 @@
   align-items: center;
 }
 .content-line {
-        position: relative;
-        padding-right: 50px;
-        &::after {
-          content: " ";
-          position: absolute;
-          width: 1px;
-          right: 0;
-          top: 0;
-          height: 200px;
-          background-color: $line-color;
-        }
+  position: relative;
+  padding-right: 50px;
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 1px;
+      right: 0;
+      top: 0;
+      height: 200px;
+      background-color: $line-color;
+    }
 }
 
 
