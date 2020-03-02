@@ -1,5 +1,5 @@
 .footer {
-  background-color: #2d3651;
+  background-color: $color-primary;
   padding: 50px 0 80px;
   position: relative;
   &__container{
@@ -21,7 +21,7 @@
       position: absolute;
       width: 76px;
       height: 2px;
-      background-color: #637588;
+      background-color: $color-gray;
       bottom: -30px;
       left: 50%;
       transform: translateX(-50%);
@@ -29,11 +29,11 @@
   }
   &__icon {
   font-size: 37px;
-  color: #ffffff;
+  color: $color-light;
   transition: color 0.5s;
       &:hover {
       font-size: 37px;
-      color: #d66926;
+      color: $color-accent;
       transition: color 0.5s;
     }
   }
@@ -42,13 +42,13 @@
     max-width: 160px;
     margin: 0 auto;
     letter-spacing: 4.78px;
-    color: #637588;
+    color: $color-gray;
     font-weight: 100;
     line-height: 20px;
     span {
       letter-spacing: 0.8px;
       font-weight: 700;
-      color: #ffffff;
+      color: $color-light;
     }
   }
   &::after {
@@ -57,7 +57,7 @@
     width: 100%;
     bottom: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: $color-light;
     height: 13px;
   }
 }

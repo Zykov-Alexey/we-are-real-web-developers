@@ -840,7 +840,7 @@ a {
   display: block;
   padding: 20px;
   width: 350px;
-  font-size: 1.125rem;
+  font-size: 18px;
   letter-spacing: 1.8px;
   background-color: rgba(45, 54, 81, 0.8);
   border: 2px solid #2d3651;
@@ -853,69 +853,64 @@ a {
   background-color: #d66926;
 }
 
-.landing-ready {
-  padding: 80px 0;
+.section-ready {
+  background-color: #e5e5e5;
 }
 
-.landing-ready h2 {
+.section-ready__left {
+  grid-column: 1 / 3;
+}
+
+.section-ready__left h2 {
+  padding: 20px 10px;
   color: #2d3651;
-  font-family: "Roboto Slab";
   font-size: 40px;
   font-weight: 700;
   letter-spacing: 4px;
   line-height: 48px;
-  margin-top: 0;
-  margin-bottom: 47px;
 }
 
-.ready {
-  background-color: #e5e5e5;
-}
-
-.ready .container {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.ready__left {
-  width: 936px;
-  height: 321px;
-  font-size: 18px;
-  padding-top: 97px;
-}
-
-.ready__left .line-after {
-  position: relative;
-  padding-right: 50px;
-}
-
-.ready__left .line-after::after {
-  content: "";
-  position: absolute;
-  width: 1px;
-  right: 0;
-  top: 0;
-  height: 200px;
-  background-color: rgba(68, 89, 110, 0.27);
-}
-
-.ready__content {
+.section-ready__left p {
   color: #637588;
-  font-family: Roboto;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.9px;
   line-height: 24px;
 }
 
-.ready__rigth {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.section-content {
+  display: grid;
+  max-width: 1340px;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.position-image {
   padding-top: 97px;
-  padding-left: 42px;
+  padding-left: 93px;
+  width: 271px;
+  height: 488px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.content-line {
+  position: relative;
+  padding-right: 50px;
+}
+
+.content-line::after {
+  content: " ";
+  position: absolute;
+  width: 1px;
+  right: 0;
+  top: 0;
+  height: 200px;
+  background-color: rgba(112, 112, 112, 0.27);
 }
 
 .formsection {
@@ -940,9 +935,9 @@ a {
   border-left: none;
   border-right: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   color: #ffffff;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1.8px;
@@ -968,7 +963,7 @@ input {
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   padding: 20px 30px;
   width: 100%;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
 }
 
 input:focus {
@@ -980,47 +975,27 @@ input:focus {
 
 input::-webkit-input-placeholder {
   color: #ffffff;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 1.8px;
-  line-height: 39px;
+  font-family: "Roboto", sans-serif;
 }
 
 input::-moz-placeholder {
   color: #ffffff;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 1.8px;
-  line-height: 39px;
+  font-family: "Roboto", sans-serif;
 }
 
 input:-ms-input-placeholder {
   color: #ffffff;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 1.8px;
-  line-height: 39px;
+  font-family: "Roboto", sans-serif;
 }
 
 input::-ms-input-placeholder {
   color: #ffffff;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 1.8px;
-  line-height: 39px;
+  font-family: "Roboto", sans-serif;
 }
 
 input::placeholder {
   color: #ffffff;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  letter-spacing: 1.8px;
-  line-height: 39px;
+  font-family: "Roboto", sans-serif;
 }
 
 .landing-posts {
@@ -1032,12 +1007,12 @@ input::placeholder {
   font-weight: 700;
   color: #2d3651;
   line-height: 48px;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", serif;
 }
 
 .section-post h2 {
   margin-top: 0;
-  margin-bottom: 54px;
+  margin-bottom: 50px;
 }
 
 .posts-button {
@@ -1052,7 +1027,6 @@ input::placeholder {
 .posts-item {
   grid-template-rows: 1fr 1fr;
   сolor: #637588;
-  overflow: hidden;
 }
 
 .posts-item:nth-child(1) {
@@ -1064,23 +1038,13 @@ input::placeholder {
 }
 
 .posts-item:hover {
-  background-color: #d5d5d5;
-  -webkit-transition: -webkit-transform .25s ease;
-  transition: -webkit-transform .25s ease;
-  -o-transition: transform .25s ease;
-  transition: transform .25s ease;
-  transition: transform .25s ease, -webkit-transform .25s ease;
+  background-color: #e5e5e5;
 }
 
 .posts-item-png {
   height: 300px;
   background-size: cover;
   background-position: center;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  -o-transition: transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .posts-item-content {
@@ -1093,7 +1057,7 @@ input::placeholder {
 .posts-item-content h4 {
   margin: 0;
   color: #637588;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -1104,7 +1068,7 @@ input::placeholder {
   margin-top: 20px;
   margin-bottom: 0;
   color: #637588;
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -1125,7 +1089,7 @@ input::placeholder {
   display: block;
   padding: 20px;
   width: 350px;
-  font-size: 1.125rem;
+  font-size: 16px;
   letter-spacing: 1.8px;
   background-color: rgba(45, 54, 81, 0.8);
   border: 2px solid #2d3651;
