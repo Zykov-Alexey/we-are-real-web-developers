@@ -27,8 +27,12 @@
     background-color: $color-accent;
     border-color:$color-light;
     }
-
   }
+}
+.form-container {
+  max-width: $ul;
+  margin: auto;
+  padding: 0 20px;
 }
 .forms__items{
   display: grid;
@@ -51,5 +55,3 @@ input {
   font-family: $font-main;
   }
 }
-
-
