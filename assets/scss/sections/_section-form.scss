@@ -1,76 +1,44 @@
 .formsection{
 	padding: 30px 0;
 	background-color: $color-primary;
-	input{
-    background-color:rgba($color-light, 0.05);
+    
+    input{
+    background-color: $color-gray-dark;
+    
   }
-	form{
-		grid-gap: 20px;
+
+    form {
+    grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    
-    @include lg-md {
-      max-width: $lg;
+    @include md-sm{
+      grid-template-columns: repeat(2, 1fr);
+      .box1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      .box2 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+      .box3 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
     }
-    
-    @include md-sm {
-      max-width: $md;
-    
-    }
-    @include sm {
-        max-width: $sm;
+      @include sm{
         grid-template-columns: 1fr;
+      }
     }
-
-
-  }
-	.button-form{
-		padding: 19px;
-    width: 100%;
-    height: 60px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-	  border-bottom: 2px solid rgba($color-light, 0.1);
-    background-color:rgba($color-light, 0.05);
-    color: $color-light;
-    font-family: $font-main;
-    font-size: $font-btsize;
-    font-weight: 400;
-    letter-spacing: 1.8px;
-    transition: background-color 0.5s;
-    &:hover{
-    background-color: $color-accent;
-    border-color:$color-light;
-    }
-  }
 }
-.form-container {
-  max-width: $ul;
-  margin: auto;
-  padding: 0 20px;
-
-  
+    
+.button-form{
+	font-size: 17px;
+	padding: 14.5px;
+  width: 100%;
 }
-.forms__items{
-  display: grid;
- 
-
-}
-input {
-  background-color:rgba($color-light, 0.05);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-	border-bottom: 2px solid rgba($color-light, 0.1);
-	padding: 20px 30px;
-	width: 100%;
-	font-family: $font-main;
-  &:focus{
-    background-color:rgba($color-light, 0.2);
-    transition-duration: 0.5s;
-  }
-	&::placeholder{
+.t-color{
   color: $color-light;
-  font-family: $font-main;
-  }
+    &::placeholder{
+      color: $color-light;
+    }
 }
