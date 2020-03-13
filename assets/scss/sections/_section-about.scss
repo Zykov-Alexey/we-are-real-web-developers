@@ -1,47 +1,122 @@
 .landing-section{
-	padding: 80px 0;
-	h2{
-    font-size: 40px;
-    font-weight: 800;
-		color: $color-primary;
-    line-height: 1.2;
-  }
-
-  @include md-sm {
-    .landing-section{
-		padding: 50px 0;
-      h2 {
-        text-align: center;
-        font-size: 26px;
-        margin-bottom: 26px;
-      }
-    }
-  }
+	padding: 40px 0 10px;
 }
 
 .section-ready{
-	background-color: $color-gray-light;
+  background-color: $color-gray-light;
+
 	.container{
     grid-template-columns: 1fr 1fr;
-  }
-  .ready-left{
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-right: 60px;
-    h2{
-      margin-top: 0;
-      margin-bottom: 40px;
+    
+    @include md-sm {
+      grid-template-columns: 1fr 1fr;
+      h2{
+        font-size: 24px;
+        font-family: $font-header;
+      } 
+      .ready-left{
+          display: grid;
+          p{
+            font-size: 16px;
+            font-family: $font-main;
+          }
+          p:nth-of-type(3) {
+            display: none;
+          }
+          p:nth-of-type(4) {
+            display: none;
+          }
+          &::after {
+            content:'';
+            position: absolute;
+            height: 200px;
+            width: 1px;
+            right: -30px;
+            top: 200px;
+            background-color: rgba($color-gray, 0.24);
+          }
+        }
+      .ready-right{
+        padding: 50px 0 0 20px;
+        display: grid;
+        justify-content: center;
+        align-items:center;
+        @include md-sm {
+          justify-content: center;
+          align-items:center;
+          }
+        }
+        
+      }
+
+
+
+
+      @include sm {
+        grid-template-columns: 1fr;
+        h2{
+          text-align: center;
+          font-size: 24px;
+          font-family: $font-header;
+        } 
+        .ready-left{
+            display: grid;
+            p{
+              font-size: 16px;
+              font-family: $font-main;
+            }
+                        
+            p:nth-of-type(4) {
+              display: none;
+            }
+            
+          }
+        .ready-right{
+          display: grid;
+          img{
+            padding: 0 auto;
+            
+          }
+          }
+          
+        }
     }
+
+    
+  }
+  .ready-left{ 
+    position: relative;
+    h2{
+      font-size: 40px;
+      font-weight: 800;
+      color: $color-primary;
+      line-height: 1.2;
+    }  
     p{
       font-size: 18px;
       font-family: $font-main;
       }
-    }
 
-  .ready-right{
-    padding-left: 40px;
-      @include md-sm{
-        grid-template-columns: 1fr;
+    &::after {
+        content:'';
+        position: absolute;
+        height: 200px;
+        width: 1px;
+        right: -30px;
+        top: 250px;
+        background-color: rgba($color-gray, 0.24);
+        
+        @include sm {
+          display: none;
+        }
       }
   }
-}
+
+  .ready-right{
+    grid-template-columns: 1fr;
+    padding: 100px 0 0 40px;
+    img{
+      margin-left: 40px;
+    }
+  }
+
