@@ -125,11 +125,10 @@
 
 
   &-img {
-    height: 300px;
+    background-position: 50% 50%;
     background-size: cover;
-    background-position: center;
-    
   }
+
     &-content {
     padding: 25px;
     text-align: center;
@@ -139,9 +138,7 @@
         color: $color-gray;
         font-family: $font-header;
         font-size: 18px;
-        font-weight: 700;
-        line-height: 20px;
-        letter-spacing: 0.9px;
+       
           @include lg-md{
             font-size: 18px;
             text-align: center;
@@ -162,8 +159,6 @@
         color: $color-gray;
         font-family: $font-main;
         font-size: $font-size;
-        font-weight: 400;
-        line-height: 20px;
-      }
+        }
   }
 }
