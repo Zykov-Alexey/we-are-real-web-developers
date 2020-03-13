@@ -87,7 +87,7 @@ input{
   border-left: none;
   border-right:none;
 	border-bottom: 2px solid $color-gray-dark;
-	padding: 15px 20px;
+	padding: 18px 20px;
   width: 100%;
   font-family: $font-main;
   &:hover{
@@ -100,7 +100,7 @@ input{
   border-left: none;
   border-right:none;
   border-bottom: 2px solid $color-gray-dark;
-	padding: 15px 20px;
+	padding: 18px 20px;
   width: 100%;
   color: $color-light;
   background-color: $color-gray-dark;
@@ -124,5 +124,9 @@ input{
   &:hover,
   &:focus {
     background-color: $color-accent;
+  }
+
+  @include sm{
+    width: 200px;
   }
 }

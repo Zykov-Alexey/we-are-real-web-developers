@@ -38,12 +38,11 @@
       margin-left: $gap / 2;
       margin-right: $gap / 2;
     }
-    @include lg-min {}
-    @include md-min {}
+    
     @include sm {
       .btn {
-        margin-left: $gap / 2 / 2 / 2 ;
-        margin-right: $gap / 2 / 2 / 2 ;
+        margin-left: $gap / 2 ;
+        margin-right: $gap / 2 ;
       }
     }
     
