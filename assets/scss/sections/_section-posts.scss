@@ -1,7 +1,20 @@
 .section-post{
 	h2{
+    font-size: 40px;
     margin-top: 0;
     margin-bottom: 50px;
+    @include lg-md{
+      font-size: 32px;
+    }
+
+    @include md-sm{
+      font-size: 24px;
+    }
+    @include sm{
+      font-size: 24px;
+      text-align: center;
+    }
+    
   }
   .buttoncase{
       padding-bottom: 0;
@@ -52,17 +65,45 @@
     &:nth-child(1) {
       grid-area: p1;
     }
+    &:nth-child(2) {
+      grid-area: p2;
+    }
+    &:nth-child(3) {
+      grid-area: p3;
+    }
     &:nth-child(4) {
-      grid-column: initial;
+      grid-area: p4;
     }
     &:nth-child(5) {
-      grid-column: initial;
+      grid-area: p5;
+    }
+    &:nth-child(6) {
+      grid-area: p6;
     }
   }
-  @include md-sm{}
+  @include md-sm{
+    &:nth-child(1) {
+      grid-area: p1;
+    }
+    &:nth-child(2) {
+      grid-area: p2;
+    }
+    &:nth-child(3) {
+      grid-area: p3;
+    }
+    &:nth-child(4) {
+      grid-area: p4;
+    }
+    &:nth-child(5) {
+      grid-area: p5;
+    }
+    &:nth-child(6) {
+      grid-area: p6;
+    }
+  }
    
   @include sm{
-      &:nth-child(1) {
+    &:nth-child(1) {
       grid-area: p1;
     }
     &:nth-child(2) {
@@ -101,7 +142,20 @@
         font-weight: 700;
         line-height: 20px;
         letter-spacing: 0.9px;
+          @include lg-md{
+            font-size: 18px;
+            text-align: center;
+          }
+          @include md-sm{
+            font-size: 18px;
+            text-align: center;
+          }
+          @include sm{
+            font-size: 18px;
+            text-align: center;
+          }
         }
+
       p{
         margin-top: 20px;
         margin-bottom: 0;
