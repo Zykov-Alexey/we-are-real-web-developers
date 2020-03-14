@@ -33,6 +33,14 @@
     display: flex;
     justify-content: center;
     
+    @include md-sm {
+      display: flex;
+      justify-content: center;
+    }
+    
+    @include md {
+      display: block;
+    }
     @include xs {
       display: block;
     }
@@ -43,11 +51,20 @@
       margin-left: $gap / 2;
       margin-right: $gap / 2;
     }
+
+    @include md-sm {
+      .btn{
+      margin-left: $gap / 2;
+      margin-right: $gap / 2;
+      }
+    }
     
     @include sm {
       .btn {
-        margin-left: $gap / 2 ;
-        margin-right: $gap / 2 ;
+        margin: 0 auto 20px;
+        &:last-child {
+          margin: 0 auto;
+        }
       }
     }
 

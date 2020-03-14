@@ -1228,6 +1228,9 @@ input:hover {
     font-size: 2rem;
     margin: 0 0 33px;
   }
+  .header-content__buttons {
+    display: block;
+  }
   .skill-item__link {
     font-size: 1.125rem;
   }
@@ -1236,6 +1239,18 @@ input:hover {
 @media (max-width: 767.8px) and (min-width: 576px) {
   .button {
     font-size: 18px;
+  }
+  .header-content__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-content__buttons .btn {
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
@@ -1354,8 +1369,10 @@ input:hover {
     margin: 0 0 13px;
   }
   .header-content__buttons .btn {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 auto 20px;
+  }
+  .header-content__buttons .btn:last-child {
+    margin: 0 auto;
   }
   .skills {
     padding: 20px;
