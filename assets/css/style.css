@@ -1161,17 +1161,6 @@ input:hover {
   }
 }
 
-@media (max-width: 767.8px) and (min-width: 576px) and (max-width: 767.8px) and (min-width: 576px) {
-  .section-ready .container .ready-right {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 @media (max-width: 991.8px) and (min-width: 768px) {
   .button {
     font-size: 18px;
@@ -1285,14 +1274,12 @@ input:hover {
     background-color: rgba(99, 117, 136, 0.24);
   }
   .section-ready .container .ready-right {
-    padding: 50px 0 0 20px;
-    display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    padding: 20px 0 0 20px;
+  }
+  .section-ready .container .ready-right .img-responsive {
+    margin: 0 auto;
+    max-width: 230px;
+    height: auto;
   }
   .formsection form {
     grid-template-columns: repeat(2, 1fr);
@@ -1404,9 +1391,12 @@ input:hover {
   }
   .section-ready .container .ready-right {
     display: grid;
+    padding: 0;
   }
-  .section-ready .container .ready-right img {
+  .section-ready .container .ready-right .img-responsive {
     margin: 0 auto;
+    max-width: 230px;
+    height: auto;
   }
   .ready-left::after {
     display: none;
@@ -1455,5 +1445,13 @@ input:hover {
   .header-content__buttons .btn {
     margin-left: 5px;
     margin-right: 5px;
+  }
+  .section-ready .container .ready-right {
+    padding: 0;
+  }
+  .section-ready .container .ready-right .img-responsive {
+    margin: 0 auto;
+    max-width: 230px;
+    height: auto;
   }
 }

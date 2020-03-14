@@ -37,20 +37,14 @@
           }
         }
       .ready-right{
-        padding: 50px 0 0 20px;
-        display: grid;
-        justify-content: center;
-        align-items:center;
-        @include md-sm {
-          justify-content: center;
-          align-items:center;
+        padding: 20px 0 0 20px;
+          .img-responsive{
+            margin: 0 auto;
+            max-width: 230px;
+            height: auto;
           }
         }
-        
-      }
-
-
-
+    }
 
       @include sm {
         grid-template-columns: 1fr;
@@ -71,18 +65,32 @@
             }
             
           }
+
         .ready-right{
           display: grid;
-          img{
+          padding: 0;
+          .img-responsive{
             margin: 0 auto;
-          }
+            max-width: 230px;
+            height: auto;
+            }
           }
           
         }
-    }
 
-    
+        @include xs {
+          .ready-right{
+            padding: 0;
+            .img-responsive{
+              margin: 0 auto;
+              max-width: 230px;
+              height: auto;
+            }
+          }
+        }
+    }
   }
+
   .ready-left{ 
     position: relative;
     h2{
