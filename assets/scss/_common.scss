@@ -45,6 +45,17 @@ a {
   max-width: $ul;
 	margin: auto;
   padding: 0 20px;
+  @include sm{
+    max-width:$sm;
+    margin: auto;
+  padding: 0 10px;
+  }
+  @include xs{
+    max-width:$xs;
+    margin: auto;
+  padding: 0 5px;
+  }
+
 }
 
 .button {
@@ -128,5 +139,12 @@ input{
 
   @include sm{
     width: 200px;
+    font-size: 1.1rem;
+  }
+
+  @include sm{
+    width: 170px;
+    padding: 9px 10px;
+    font-size: 1rem;
   }
 }

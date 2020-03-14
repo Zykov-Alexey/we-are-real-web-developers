@@ -45,6 +45,12 @@
         margin-right: $gap / 2 ;
       }
     }
+    @include xs {
+      .btn {
+        margin-left: $gap / 4;
+        margin-right: $gap / 4;
+      }
+    }
     
     
   }
