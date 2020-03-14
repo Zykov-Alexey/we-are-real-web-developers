@@ -24,15 +24,20 @@
     }
 
     @include sm {
-      font-size: 1.4rem;
+      font-size: 1.45rem;
       margin: 0 0 13px;
     }
-
   }
 
   &__buttons {
     display: flex;
     justify-content: center;
+    
+    @include xs {
+      display: block;
+    }
+
+
 
     .btn {
       margin-left: $gap / 2;
@@ -48,9 +53,12 @@
 
     @include xs {
       .btn {
-        margin-left: $gap / 4;
-        margin-right: $gap / 4;
+        margin: 0 auto 20px;
+        &:last-child {
+          margin: 0 auto;
+        }
       }
     }
   }
 }
+

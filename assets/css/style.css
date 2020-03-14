@@ -1350,7 +1350,7 @@ input:hover {
     letter-spacing: 0.15em;
   }
   .header-content__title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     margin: 0 0 13px;
   }
   .header-content__buttons .btn {
@@ -1442,9 +1442,14 @@ input:hover {
     margin: auto;
     padding: 0 5px;
   }
+  .header-content__buttons {
+    display: block;
+  }
   .header-content__buttons .btn {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 auto 20px;
+  }
+  .header-content__buttons .btn:last-child {
+    margin: 0 auto;
   }
   .section-ready .container .ready-right {
     padding: 0;
